@@ -184,12 +184,12 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 .panel-arrow[side="top"],
 .panel-arrow[side="bottom"] {
-  transform: translateY(3px) !important;
+  transform: translateY(1px) scale(.75) !important;
   list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10"><path d="M 0,10 L 10,0 20,10 z" fill="hsl(220, 13.8%, 21.4%)"/><path d="M 1,10 L 10,1 19,10 z" fill="hsl(220, 13.8%, 21.4%)"/></svg>') !important;
 }
 .panel-arrow[side="left"],
 .panel-arrow[side="right"] {
-  transform: translateX(3px) !important;
+  transform: translateX(1px) scale(.75) !important;
   list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="20"><path d="M 10,0 L 0,10 10,20 z" fill="hsl(220, 13.8%, 21.4%)"/><path d="M 10,1 L 1,10 10,19 z" fill="hsl(220, 13.8%, 21.4%)"/></svg>') !important;
 }
 
