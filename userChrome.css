@@ -28,6 +28,10 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 
 /* Tabs */
 
+#navigator-toolbox {
+  --tabs-border-color: rgba(0,0,0,0) !important;
+}
+
 .tabbrowser-tab {
   border-top-left-radius: 3px !important;
   border-top-right-radius: 3px !important;
