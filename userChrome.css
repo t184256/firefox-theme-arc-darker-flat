@@ -134,6 +134,8 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 }
 
 #identity-box:hover:not(.no-hover):not([open="true"]),
+#identity-box:hover:active:not(.no-hover),
+#identity-box[open="true"],
 .urlbar-icon:hover,
 .urlbar-icon-wrapper:hover,
 .urlbar-icon:hover:active,
