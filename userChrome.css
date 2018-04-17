@@ -38,7 +38,7 @@
 }
 
 .tabbrowser-tab:not([selected=true]) {
-  opacity: .6;
+  opacity: .75;
 }
 
 .tabbrowser-tab:not([selected=true]) .tab-icon,
