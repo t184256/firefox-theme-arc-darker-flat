@@ -221,6 +221,13 @@ panelview {
 
 /* autocomplete */
 
+#PopupAutoCompleteRichResult {
+  background-clip: padding-box !important;
+}
+#PopupAutoCompleteRichResult .search-one-offs {
+  border-bottom: 2px solid var(--lwt-toolbar-field-background-color);
+}
+
 panel[type="autocomplete"],
 panel[type="autocomplete-richlistbox"] {
   background-color: var(--chrome-secondary-background-color) !important;
