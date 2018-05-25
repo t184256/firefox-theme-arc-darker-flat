@@ -224,7 +224,6 @@ panel .subviewbutton[shortcut]::after {
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
-  //color: $text-color-disabled;
   background-color: $info-background-color;
   padding: 2px 4px;
   border-radius: $border-radius;
@@ -239,10 +238,6 @@ panel .subview-subheader {
 
 panel .panel-header > label {
   text-transform: uppercase !important;
-}
-
-panel description {
-  color: red;
 }
 
 .panel-arrowcontent {

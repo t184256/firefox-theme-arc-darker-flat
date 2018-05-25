@@ -212,10 +212,6 @@ panel .panel-header > label {
   text-transform: uppercase !important;
 }
 
-panel description {
-  color: red;
-}
-
 .panel-arrowcontent {
   border: 0 !important;
   box-shadow: none !important;
