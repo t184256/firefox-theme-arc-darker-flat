@@ -1,36 +1,26 @@
 :root {
   --chrome-background-color: #2f343e !important;
   --chrome-secondary-background-color: #262a32 !important;
-  --chrome-color: rgba(255, 255, 255, 0.5) !important;
-  --chrome-nav-bar-controls-border-color: transparent !important;
+  --chrome-color: #979a9f !important;
+  --chrome-nav-bar-controls-border-color: rgba(0, 0, 0, 0) !important;
   --url-and-searchbar-background-color: rgba(0, 0, 0, 0.2) !important;
   --lwt-toolbar-field-background-color: rgba(0, 0, 0, 0.2) !important;
-  --panel-separator-color: transparent !important;
-}
-
-/* toolbar buttons */
-toolbar {
-  --toolbarbutton-inner-padding: 4px !important;
-  --toolbarbutton-hover-background: rgba(0, 0, 0, 0.15) !important;
-  --toolbarbutton-active-background: rgba(0, 0, 0, 0.15) !important;
-  padding-right: 5px !important;
-}
-
-toolbar .toolbarbutton-1 > .toolbarbutton-icon {
-  width: calc(2 * var(--toolbarbutton-inner-padding) + 17px) !important;
+  --panel-separator-color: rgba(0, 0, 0, 0) !important;
+  --lwt-text-color: #979a9f !important;
 }
 
 /* tabs */
 #navigator-toolbox {
-  --tabs-border-color: rgba(0,0,0,0) !important;
+  --tabs-border-color: rgba(0, 0, 0, 0) !important;
 }
 
 .tabbrowser-tab {
-  --tab-line-color: #0077f0;
-  --tab-loading-fill: #0077f0;
+  --tab-line-color: #006bd6;
+  --tab-loading-fill: #006bd6;
   border-top-left-radius: 3px !important;
   border-top-right-radius: 3px !important;
   overflow: hidden;
+  font-size: 95% !important;
 }
 
 .tabbrowser-tab:not([selected=true]) {
@@ -63,7 +53,7 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 }
 
 .tabs-newtab-button .toolbarbutton-icon {
-  border: 3px solid var(--chrome-background-color) !important;
+  border: 3px solid #2f343e !important;
   padding: 4px !important;
   border-radius: 5px !important;
   transform: translateY(1px);
@@ -88,7 +78,7 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
   transform: scale(0.8) translateX(-4px);
   padding: 2px;
   opacity: .75;
-  background-color: var(--tab-line-color) !important;
+  background-color: #006bd6 !important;
   transition: transform .1s ease, opacity .1s ease;
 }
 
@@ -107,10 +97,47 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
   margin-left: 3px !important;
 }
 
+/* toolbar buttons */
+toolbar {
+  --toolbarbutton-inner-padding: 4px !important;
+  --toolbarbutton-hover-background: rgba(0, 0, 0, 0.15) !important;
+  --toolbarbutton-active-background: rgba(0, 0, 0, 0.15) !important;
+  padding-right: 5px !important;
+}
+
+toolbar .toolbarbutton-1 > .toolbarbutton-icon {
+  width: calc(2 * var(--toolbarbutton-inner-padding) + 17px) !important;
+}
+
+.toolbarbutton-animatable-box[brighttext],
+toolbar[brighttext] .toolbarbutton-animatable-box,
+toolbar[brighttext] .toolbarbutton-1 {
+  fill: #979a9f !important;
+}
+
+.toolbarbutton-animatable-box[brighttext]:hover,
+toolbar[brighttext] .toolbarbutton-animatable-box:hover,
+toolbar[brighttext] .toolbarbutton-1:hover {
+  fill: #b6b8bb !important;
+}
+
 /* urlbar */
 #urlbar, .searchbar-textbox {
-  border: 0 !important;
+  border-color: #262a32 !important;
   box-shadow: none !important;
+  font-size: 95% !important;
+}
+
+.urlbar-input {
+  color: #979a9f !important;
+}
+
+.urlbar-icon {
+  fill: #979a9f !important;
+}
+
+.urlbar-icon:hover {
+  fill: #b6b8bb !important;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
@@ -131,6 +158,11 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
   fill: #058B00 !important;
 }
 
+#identity-box {
+  color: #979a9f !important;
+  fill: #979a9f !important;
+}
+
 #identity-box:hover:not(.no-hover):not([open="true"]),
 #identity-box:hover:active:not(.no-hover),
 #identity-box[open="true"],
@@ -140,7 +172,9 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 .urlbar-icon-wrapper:hover:active,
 .urlbar-icon[open],
 .urlbar-icon-wrapper[open] {
-  background-color: var(--toolbarbutton-hover-background) !important;
+  background-color: rgba(0, 0, 0, 0.15) !important;
+  color: #b6b8bb !important;
+  fill: #979a9f !important;
 }
 
 [uidensity="compact"]:root .urlbar-icon {
@@ -162,7 +196,6 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 /* bookmaks toolbar */
 [uidensity="compact"]:root toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin: 3px 3px 5px !important;
-  background-color: rgba(255, 255, 255, 0.025);
 }
 
 [uidensity="compact"]:root toolbarbutton.bookmark-item:not(.subviewbutton):first-child {
@@ -171,6 +204,7 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   padding: 4px 6px !important;
+  font-size: 95% !important;
 }
 
 /* panel */
@@ -178,7 +212,7 @@ panelview {
   --arrowpanel-dimmed: rgba(0, 0, 0, 0.15) !important;
   --arrowpanel-dimmed-further: #262a32 !important;
   background-color: #2f343e !important;
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: #979a9f !important;
 }
 
 panel toolbarbutton:not(.panel-subview-footer) {
@@ -188,7 +222,7 @@ panel toolbarbutton:not(.panel-subview-footer) {
 }
 
 panel toolbarbutton:hover {
-  color: rgba(255, 255, 255, 0.75) !important;
+  color: #b6b8bb !important;
 }
 
 panel .subviewbutton[shortcut]::after {
@@ -210,6 +244,14 @@ panel .subview-subheader {
 
 panel .panel-header > label {
   text-transform: uppercase !important;
+}
+
+panel .identity-popup-connection-secure {
+  color: #058B00 !important;
+}
+
+#identity-popup[connection^="secure"] .identity-popup-security-content {
+  fill: #058B00 !important;
 }
 
 .panel-arrowcontent {
@@ -248,6 +290,49 @@ panel[type="autocomplete-richlistbox"] {
   border: none !important;
 }
 
+.autocomplete-richlistitem {
+  font-size: 95% !important;
+  color: #979a9f !important;
+}
+
+.autocomplete-richlistitem .ac-separator {
+  color: rgba(0, 0, 0, 0) !important;
+}
+
+.autocomplete-richlistitem .ac-url:not([selected="true"]) {
+  font-weight: bold;
+  font-size: 90% !important;
+  color: #006bd6;
+}
+
+.autocomplete-richlistitem .ac-url[selected="true"] {
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.autocomplete-richlistitem .ac-action {
+  color: #4e535b !important;
+}
+
+.autocomplete-richlistitem:hover {
+  color: #b6b8bb !important;
+  background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.autocomplete-richlistitem:hover .ac-action {
+  color: #006bd6 !important;
+  font-weight: bold;
+}
+
+.autocomplete-richlistitem[selected="true"] {
+  background-color: #006bd6 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: bold !important;
+}
+
+.autocomplete-richlistitem[selected="true"] .ac-action {
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+
 /* menupopup */
 menupopup {
   -moz-appearance: none !important;
@@ -280,7 +365,7 @@ menuitem[type="checked"],
 menucaption {
   -moz-appearance: none !important;
   padding: 5px;
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: #979a9f !important;
   padding: 6px 12px !important;
   margin: 0 6px !important;
   border-radius: 3px;
@@ -288,13 +373,13 @@ menucaption {
 
 menu[_moz-menuactive="true"]:not([disabled="true"]),
 menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
-  color: rgba(255, 255, 255, 0.75) !important;
+  color: #b6b8bb !important;
   background: rgba(0, 0, 0, 0.15) !important;
 }
 
 menu[disabled="true"],
 menuitem[disabled="true"],
 menucaption[disabled="true"] {
-  color: rgba(255, 255, 255, 0.15) !important;
-  background-color: transparent !important;
+  color: #4e535b !important;
+  background-color: rgba(0, 0, 0, 0) !important;
 }

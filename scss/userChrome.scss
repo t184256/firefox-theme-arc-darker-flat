@@ -11,27 +11,14 @@
 
   --panel-separator-color: #{$u-reset-color};
 
-}
-
-
-/* toolbar buttons */
-
-toolbar {
-  --toolbarbutton-inner-padding: 4px !important;
-  --toolbarbutton-hover-background: #{$background-color-hover};
-  --toolbarbutton-active-background: #{$background-color-hover};
-  padding-right: 5px !important;
-}
-
-toolbar .toolbarbutton-1 > .toolbarbutton-icon {
-  width: calc(2 * var(--toolbarbutton-inner-padding) + 17px) !important;
+  --lwt-text-color: #{$text-color};
 }
 
 
 /* tabs */
 
 #navigator-toolbox {
-  --tabs-border-color: rgba(0,0,0,0) !important;
+  --tabs-border-color: #{$u-reset-color};
 }
 
 #tabbrowser-tabs:-moz-lwtheme {
@@ -40,9 +27,10 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 .tabbrowser-tab {
   --tab-line-color: #{$accent-color};
   --tab-loading-fill: #{$accent-color};
-  border-top-left-radius: 3px !important;
-  border-top-right-radius: 3px !important;
+  border-top-left-radius: $border-radius !important;
+  border-top-right-radius: $border-radius !important;
   overflow: hidden;
+  font-size: $toolbar-fontsize;
 }
 
 .tabbrowser-tab:not([selected=true]) {
@@ -75,25 +63,25 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 }
 
 .tabs-newtab-button .toolbarbutton-icon {
-  border: 3px solid var(--chrome-background-color) !important;
+  border: 3px solid $background-color;
   padding: 4px !important;
   border-radius: 5px !important;
   transform: translateY(1px);
 }
 
 .tabs-newtab-button:hover .toolbarbutton-icon {
-  background-color: rgba(255, 255, 255, 0.05) !important;
+  background-color: $tabs-background-hover-color;
 }
 
 
 /* tabs hover */
 
 #TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
-  background-color: rgba(255, 255, 255, 0.05) !important;
+  background-color: $tabs-background-hover-color;
 }
 
 #TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-line:not([selected=true]) {
-  background-color: rgba(255, 255, 255, 0.075) !important;
+  background-color: $tabs-background-hover-line-color;
 }
 
 
@@ -104,7 +92,7 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
   transform: scale(0.8) translateX(-4px);
   padding: 2px;
   opacity: .75;
-  background-color: var(--tab-line-color) !important;
+  background-color: $accent-color !important;
   transition: transform .1s ease, opacity .1s ease;
 }
 
@@ -128,11 +116,50 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 }
 
 
+/* toolbar buttons */
+
+toolbar {
+  --toolbarbutton-inner-padding: 4px !important;
+  --toolbarbutton-hover-background: #{$background-color-hover};
+  --toolbarbutton-active-background: #{$background-color-hover};
+  padding-right: 5px !important;
+}
+
+toolbar .toolbarbutton-1 > .toolbarbutton-icon {
+  width: calc(2 * var(--toolbarbutton-inner-padding) + 17px) !important;
+}
+
+.toolbarbutton-animatable-box[brighttext],
+toolbar[brighttext] .toolbarbutton-animatable-box,
+toolbar[brighttext] .toolbarbutton-1 {
+  fill: $text-color;
+}
+
+.toolbarbutton-animatable-box[brighttext]:hover,
+toolbar[brighttext] .toolbarbutton-animatable-box:hover,
+toolbar[brighttext] .toolbarbutton-1:hover {
+  fill: $text-color-hover;
+}
+
+
 /* urlbar */
 
 #urlbar, .searchbar-textbox {
-  border: 0 !important;
+  border-color: $secondary-background-color;
   box-shadow: none !important;
+  font-size: $toolbar-fontsize;
+}
+
+.urlbar-input {
+  color: $text-color;
+}
+
+.urlbar-icon {
+  fill: $text-color;
+}
+
+.urlbar-icon:hover {
+  fill: $text-color-hover;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
@@ -144,13 +171,18 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity > #identity-icon-labels:-moz-lwtheme-brighttext {
-  color: #058B00 !important;
+  color: $text-color-success;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain > #connection-icon,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity > #connection-icon,
 #urlbar[pageproxystate="valid"] > #identity-box.mixedActiveBlocked > #connection-icon {
-  fill: #058B00 !important;
+  fill: $text-color-success;
+}
+
+#identity-box {
+  color: $text-color;
+  fill: $text-color;
 }
 
 #identity-box:hover:not(.no-hover):not([open="true"]),
@@ -162,7 +194,9 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 .urlbar-icon-wrapper:hover:active,
 .urlbar-icon[open],
 .urlbar-icon-wrapper[open] {
-  background-color: var(--toolbarbutton-hover-background) !important;
+  background-color: $background-color-hover;
+  color: $text-color-hover;
+  fill: $text-color;
 }
 
 [uidensity="compact"]:root .urlbar-icon {
@@ -188,7 +222,6 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 
 [uidensity="compact"]:root toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin: 3px 3px 5px !important;
-  background-color: rgba(255, 255, 255, 0.025);
 }
 
 [uidensity="compact"]:root toolbarbutton.bookmark-item:not(.subviewbutton):first-child {
@@ -197,6 +230,7 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   padding: 4px 6px !important;
+  font-size: $toolbar-fontsize;
 }
 
 
@@ -240,6 +274,14 @@ panel .panel-header > label {
   text-transform: uppercase !important;
 }
 
+panel .identity-popup-connection-secure {
+  color: $text-color-success;
+}
+
+#identity-popup[connection^="secure"] .identity-popup-security-content {
+  fill: $text-color-success;
+}
+
 .panel-arrowcontent {
   border: 0 !important;
   box-shadow: none !important;
@@ -276,6 +318,49 @@ panel[type="autocomplete"],
 panel[type="autocomplete-richlistbox"] {
   background-color: $secondary-background-color;
   border: none !important;
+}
+
+.autocomplete-richlistitem {
+  font-size: $toolbar-fontsize;
+  color: $text-color;
+
+  .ac-separator {
+    color: $u-reset-color;
+  }
+
+  .ac-url:not([selected="true"]) {
+    font-weight: bold;
+    font-size: 90% !important;
+    color: $accent-color;
+  }
+
+  .ac-url[selected="true"] {
+    color: $accent-background-text-color-secondary !important;
+  }
+
+  .ac-action {
+    color: $text-color-disabled;
+  }
+}
+
+.autocomplete-richlistitem:hover {
+  color: $text-color-hover;
+  background-color: $background-color-hover;
+
+  .ac-action {
+    color: $accent-color !important;
+    font-weight: bold;
+  }
+}
+
+.autocomplete-richlistitem[selected="true"] {
+  background-color: $accent-background-color !important;
+  color: $accent-background-text-color !important;
+  font-weight: bold !important;
+
+  .ac-action {
+    color: $accent-background-text-color-secondary !important;
+  }
 }
 
 
