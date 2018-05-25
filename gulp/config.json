@@ -1,0 +1,14 @@
+{
+  "css": {
+    "src": "./scss/*.scss",
+    "dest": "./",
+    "watch": ["./scss/**/*.scss"]
+  },
+
+  "clean": {
+    "local": [
+      "userChrome.css",
+      "userContent.css"
+    ]
+  }
+}

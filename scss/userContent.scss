@@ -6,20 +6,20 @@ body, input, textarea {
 
 /* activity stream theme */
 body.activity-stream {
-  background-color: #262a32 !important;
+  background-color: hsl(220, 13.8%, 17.4%) !important;
   overflow: auto !important;
 }
 
 .activity-stream .section-title span,
 .activity-stream .edit-topsites-wrapper .edit-topsites-button button {
-  color: rgba(255, 255, 255, 0.5) !important;
-  fill: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255,255,255,.5) !important;
+  fill: rgba(255,255,255,.5) !important;
 }
 
 .activity-stream .top-sites-list .top-site-outer:hover .tile,
-.activity-stream .top-sites-list .top-site-outer:focus .tile,
-.activity-stream .top-sites-list .top-site-outer.active .tile {
-  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2) !important;
+.activity-stream  .top-sites-list .top-site-outer:focus .tile,
+.activity-stream  .top-sites-list .top-site-outer.active .tile {
+  box-shadow: 0 0 0 5px rgba(0,0,0,.2) !important;
 }
 
 .activity-stream .top-sites-list .top-site-outer .top-site-icon {
@@ -27,18 +27,17 @@ body.activity-stream {
 }
 
 .activity-stream .top-sites-list .top-site-outer .title {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255,255,255,.5) !important;
 }
 
 .activity-stream .section-top-bar .info-option-icon {
-  fill: rgba(255, 255, 255, 0.5) !important;
+  fill: rgba(255,255,255,.5) !important;
 }
 
 .activity-stream .prefs-pane-button button {
-  fill: rgba(255, 255, 255, 0.5) !important;
+  fill: rgba(255,255,255,.5) !important;
   background-size: 13px !important;
 }
-
 .activity-stream .prefs-pane-button button:hover {
   background-color: #1E2228 !important;
   border-radius: 4px !important;
@@ -47,10 +46,9 @@ body.activity-stream {
 .activity-stream .top-sites-list .top-site-outer .context-menu-button {
   border: 0 !important;
   background-color: #1E2228 !important;
-  fill: rgba(255, 255, 255, 0.5) !important;
+  fill: rgba(255, 255, 255, .5) !important;
   background-size: 13px !important;
 }
-
 .activity-stream .top-sites-list .top-site-outer:hover .context-menu-button,
 .activity-stream .top-sites-list .top-site-outer:focus .context-menu-button,
 .activity-stream .top-sites-list .top-site-outer.active .context-menu-button {
