@@ -157,6 +157,14 @@ toolbar[brighttext] .toolbarbutton-1:hover {
   fill: #b6b8bb !important;
 }
 
+#urlbar-zoom-button {
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: none !important;
+  color: #979a9f !important;
+}
+
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
 #urlbar[pageproxystate="valid"] > #identity-box.chromeUI,
 #urlbar[pageproxystate="valid"] > #identity-box.extensionPage,
