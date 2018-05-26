@@ -1,0 +1,13 @@
+:root {
+  --chrome-background-color: #{$background-color};
+  --chrome-secondary-background-color: #{$secondary-background-color};
+
+  --url-and-searchbar-background-color: #{$tertiary-background-color}; // deprecated?
+  --lwt-toolbar-field-background-color: #{$tertiary-background-color};
+
+  --chrome-color: #{$text-color};
+  --lwt-text-color: #{$text-color};
+
+  --chrome-nav-bar-controls-border-color: #{$u-reset-color};
+  --panel-separator-color: #{$u-reset-color};
+}

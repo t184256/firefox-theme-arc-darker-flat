@@ -1,12 +1,12 @@
 :root {
   --chrome-background-color: #2f343e !important;
   --chrome-secondary-background-color: #262a32 !important;
-  --chrome-color: #979a9f !important;
-  --chrome-nav-bar-controls-border-color: rgba(0, 0, 0, 0) !important;
   --url-and-searchbar-background-color: rgba(0, 0, 0, 0.2) !important;
   --lwt-toolbar-field-background-color: rgba(0, 0, 0, 0.2) !important;
-  --panel-separator-color: rgba(0, 0, 0, 0) !important;
+  --chrome-color: #979a9f !important;
   --lwt-text-color: #979a9f !important;
+  --chrome-nav-bar-controls-border-color: rgba(0, 0, 0, 0) !important;
+  --panel-separator-color: rgba(0, 0, 0, 0) !important;
 }
 
 /* tabs */
@@ -214,7 +214,7 @@ toolbar[brighttext] .toolbarbutton-1:hover {
   border-bottom: 0 !important;
 }
 
-/* bookmaks toolbar */
+/* bookmarks toolbar */
 [uidensity="compact"]:root toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin: 3px 3px 5px !important;
 }

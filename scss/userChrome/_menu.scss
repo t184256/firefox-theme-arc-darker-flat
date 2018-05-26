@@ -1,0 +1,53 @@
+/* menupopup */
+
+menupopup {
+  -moz-appearance: none !important;
+}
+
+menupopup menupopup {
+  transform: translateY(-5px);
+  padding-top: 1px;
+}
+
+menupopup > .popup-internal-box {
+  background-color: $background-color;
+  margin: 5px 5px !important;
+  box-shadow: $popup-box-shadow;
+  border-radius: $border-radius;
+  overflow: hidden;
+  padding: 6px 0;
+}
+
+menuseparator {
+  -moz-appearance: none;
+  height: 10px;
+}
+
+// -moz-appearance:none for radio/checkbox is broken
+menu,
+menuitem,
+menuitem[type="radio"],
+menuitem[type="checkbox"],
+menuitem[type="checked"],
+menucaption {
+  -moz-appearance: none !important;
+  padding: 5px;
+  color: $text-color;
+  padding: 6px 12px !important;
+  margin: 0 6px !important;
+  border-radius: $border-radius;
+}
+
+menu[_moz-menuactive="true"]:not([disabled="true"]),
+menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
+  color: $text-color-hover;
+  background: $background-color-hover;
+
+}
+
+menu[disabled="true"],
+menuitem[disabled="true"],
+menucaption[disabled="true"] {
+  color: $text-color-disabled;
+  background-color: $u-reset-color;
+}

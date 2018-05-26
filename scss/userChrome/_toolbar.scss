@@ -1,0 +1,131 @@
+/* nav bar */
+
+#back-button {
+  margin-left: 3px !important;
+}
+
+
+/* toolbar buttons */
+
+toolbar {
+  --toolbarbutton-inner-padding: 4px !important;
+  --toolbarbutton-hover-background: #{$background-color-hover};
+  --toolbarbutton-active-background: #{$background-color-hover};
+  padding-right: 5px !important;
+}
+
+toolbar .toolbarbutton-1 > .toolbarbutton-icon {
+  width: calc(2 * var(--toolbarbutton-inner-padding) + 17px) !important;
+}
+
+.toolbarbutton-animatable-box[brighttext],
+toolbar[brighttext] .toolbarbutton-animatable-box,
+toolbar[brighttext] .toolbarbutton-1 {
+  fill: $text-color;
+}
+
+.toolbarbutton-animatable-box[brighttext]:hover,
+toolbar[brighttext] .toolbarbutton-animatable-box:hover,
+toolbar[brighttext] .toolbarbutton-1:hover {
+  fill: $text-color-hover;
+}
+
+
+/* urlbar */
+
+#urlbar, .searchbar-textbox {
+  border-color: $secondary-background-color;
+  box-shadow: none !important;
+  font-size: $toolbar-fontsize;
+  max-height: 24px;
+}
+
+#urlbar-display-box {
+  border-inline-start: none !important;
+}
+
+.urlbar-input {
+  color: $text-color;
+}
+
+.urlbar-icon {
+  fill: $text-color;
+}
+
+.urlbar-icon:hover {
+  fill: $text-color-hover;
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI,
+#urlbar[pageproxystate="valid"] > #identity-box.extensionPage,
+#urlbar-display-box {
+  border-inline-end: 0 !important;
+  margin-inline-end: 6px !important;
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity > #identity-icon-labels:-moz-lwtheme-brighttext {
+  color: $text-color-success;
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain > #connection-icon,
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity > #connection-icon,
+#urlbar[pageproxystate="valid"] > #identity-box.mixedActiveBlocked > #connection-icon {
+  fill: $text-color-success;
+}
+
+#identity-box {
+  color: $text-color;
+  fill: $text-color;
+}
+
+#identity-box > image {
+  transform: scale(0.75);
+}
+
+#identity-box:hover:not(.no-hover):not([open="true"]),
+#identity-box:hover:active:not(.no-hover),
+#identity-box[open="true"],
+.urlbar-icon:hover,
+.urlbar-icon-wrapper:hover,
+.urlbar-icon:hover:active,
+.urlbar-icon-wrapper:hover:active,
+.urlbar-icon[open],
+.urlbar-icon-wrapper[open] {
+  background-color: $background-color-hover;
+  color: $text-color-hover;
+  fill: $text-color;
+}
+
+[uidensity="compact"]:root .urlbar-icon {
+  height: 26px !important;
+  padding: 6px !important;
+}
+
+#pageActionSeparator {
+  width: 0 !important;
+  border-inline-start: 0 !important;
+  margin: 0 !important;
+}
+
+
+/* navigator toolbox */
+
+#navigator-toolbox::after {
+  border-bottom: 0 !important;
+}
+
+/* bookmarks toolbar */
+
+[uidensity="compact"]:root toolbarbutton.bookmark-item:not(.subviewbutton) {
+  margin: 3px 3px 5px !important;
+}
+
+[uidensity="compact"]:root toolbarbutton.bookmark-item:not(.subviewbutton):first-child {
+  margin-left: 0 !important;
+}
+
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+  padding: 4px 6px !important;
+  font-size: $toolbar-fontsize;
+}

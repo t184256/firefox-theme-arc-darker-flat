@@ -1,0 +1,106 @@
+/* tabs */
+
+#navigator-toolbox {
+  --tabs-border-color: #{$u-reset-color};
+}
+
+#tabbrowser-tabs:-moz-lwtheme {
+}
+
+.tabbrowser-tab {
+  --tab-line-color: #{$accent-color};
+  --tab-loading-fill: #{$accent-color};
+  border-top-left-radius: $border-radius !important;
+  border-top-right-radius: $border-radius !important;
+  overflow: hidden;
+  font-size: $toolbar-fontsize;
+}
+
+.tabbrowser-tab:not([selected=true]) {
+  opacity: .6;
+
+  .tab-icon,
+  .tab-icon-image {
+    filter: grayscale(1) brightness(0.9) invert(1);
+    opacity: .3;
+  }
+
+  &:hover {
+    .tab-icon,
+    .tab-icon-image {
+      filter: none;
+      opacity: .6;
+    }
+  }
+}
+
+.tabbrowser-tab:hover:not([selected=true]) {
+  opacity: 1;
+}
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+  border-left: 0 !important;
+}
+
+.tabbrowser-tab .tab-line[selected="true"] {
+  opacity: .75 !important;
+}
+
+.tab-background[selected="true"] {
+  border: 0 !important;
+}
+
+.tab-content {
+  padding: 0 9px !important;
+}
+
+.tab-content .tab-close-button .toolbarbutton-icon {
+  transform: scale(0.8) translateX(3px);
+}
+
+.tabs-newtab-button .toolbarbutton-icon {
+  border: 3px solid $background-color;
+  padding: 4px !important;
+  border-radius: 5px !important;
+  transform: translateY(1px);
+}
+
+.tabs-newtab-button:hover .toolbarbutton-icon {
+  background-color: $tabs-background-hover-color;
+}
+
+
+/* tabs hover */
+
+#TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
+  background-color: $tabs-background-hover-color;
+}
+
+#TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-line:not([selected=true]) {
+  background-color: $tabs-background-hover-line-color;
+}
+
+
+/* tabs overlay icons */
+
+.tab-icon-overlay {
+  margin-top: 0 !important;
+  transform: scale(0.8) translateX(-4px);
+  padding: 2px;
+  opacity: .75;
+  background-color: $accent-color !important;
+  transition: transform .1s ease, opacity .1s ease;
+}
+
+.tab-icon-overlay:hover {
+  transform: scale(1) translateX(-4px);
+  opacity: 1;
+}
+
+
+/* tabs toolbar */
+
+#TabsToolbar:not([collapsed="true"]) + #nav-bar {
+  border: 0 !important;
+}
