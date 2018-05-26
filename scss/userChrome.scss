@@ -35,6 +35,20 @@
 
 .tabbrowser-tab:not([selected=true]) {
   opacity: .6;
+
+  .tab-icon,
+  .tab-icon-image {
+    filter: grayscale(1) brightness(0.9) invert(1);
+    opacity: .3;
+  }
+
+  &:hover {
+    .tab-icon,
+    .tab-icon-image {
+      filter: none;
+      opacity: .6;
+    }
+  }
 }
 
 .tabbrowser-tab:hover:not([selected=true]) {
