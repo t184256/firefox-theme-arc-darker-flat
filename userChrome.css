@@ -126,6 +126,11 @@ toolbar[brighttext] .toolbarbutton-1:hover {
   border-color: #262a32 !important;
   box-shadow: none !important;
   font-size: 95% !important;
+  max-height: 24px;
+}
+
+#urlbar-display-box {
+  border-inline-start: none !important;
 }
 
 .urlbar-input {
@@ -161,6 +166,10 @@ toolbar[brighttext] .toolbarbutton-1:hover {
 #identity-box {
   color: #979a9f !important;
   fill: #979a9f !important;
+}
+
+#identity-box > image {
+  transform: scale(0.75);
 }
 
 #identity-box:hover:not(.no-hover):not([open="true"]),
