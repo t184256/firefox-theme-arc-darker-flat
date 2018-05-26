@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --chrome-background-color: #2f343e !important;
   --chrome-secondary-background-color: #262a32 !important;
@@ -7,6 +8,10 @@
   --lwt-text-color: #979a9f !important;
   --chrome-nav-bar-controls-border-color: rgba(0, 0, 0, 0) !important;
   --panel-separator-color: rgba(0, 0, 0, 0) !important;
+}
+
+.browserContainer {
+  background-color: #2f343e !important;
 }
 
 /* tabs */
@@ -134,7 +139,8 @@ toolbar[brighttext] .toolbarbutton-1:hover {
 }
 
 /* urlbar */
-#urlbar, .searchbar-textbox {
+#urlbar,
+.searchbar-textbox {
   border-color: #262a32 !important;
   box-shadow: none !important;
   font-size: 95% !important;
@@ -147,6 +153,10 @@ toolbar[brighttext] .toolbarbutton-1:hover {
 
 .urlbar-input {
   color: #979a9f !important;
+}
+
+.urlbar-input[focused="true"] {
+  color: #b6b8bb !important;
 }
 
 .urlbar-icon {
@@ -411,4 +421,81 @@ menuitem[disabled="true"],
 menucaption[disabled="true"] {
   color: #4e535b !important;
   background-color: rgba(0, 0, 0, 0) !important;
+}
+
+findbar {
+  --toolbarbutton-hover-background: rgba(0, 0, 0, 0) !important;
+  --toolbarbutton-active-background: rgba(0, 0, 0, 0) !important;
+  border-top: none !important;
+  background-color: #2f343e !important;
+  box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.25) !important;
+  position: relative;
+  padding: 4px 0 !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+findbar [anonid="findbar-textbox-wrapper"] {
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+findbar .findbar-textbox {
+  border-radius: 3px 0 0 3px !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  color: #979a9f !important;
+}
+
+findbar .findbar-textbox[focused="true"] {
+  color: #b6b8bb !important;
+}
+
+findbar .findbar-find-previous,
+findbar .findbar-find-next {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+findbar .findbar-find-previous .toolbarbutton-icon,
+findbar .findbar-find-next .toolbarbutton-icon {
+  transform: scale(0.75);
+}
+
+findbar .findbar-find-previous:hover,
+findbar .findbar-find-next:hover {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+findbar .findbar-button {
+  margin-left: 10px !important;
+  padding: 0 2px 0 6px !important;
+  border-radius: 3px !important;
+  font-weight: 400;
+}
+
+findbar .findbar-button::before {
+  content: '✔';
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-radius: 3px;
+  padding: 0 2px;
+  color: rgba(0, 0, 0, 0);
+  transition: color .2s ease;
+}
+
+findbar .findbar-button:hover {
+  color: #b6b8bb !important;
+}
+
+findbar .findbar-button[checked="true"]::before {
+  color: #006bd6 !important;
+}
+
+findbar .findbar-container > .findbar-find-fast {
+  font-weight: 700;
+  margin-left: 20px !important;
+  transform: translateY(1px);
+  color: #006bd6 !important;
 }

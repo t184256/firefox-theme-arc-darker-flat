@@ -33,7 +33,8 @@ toolbar[brighttext] .toolbarbutton-1:hover {
 
 /* urlbar */
 
-#urlbar, .searchbar-textbox {
+#urlbar,
+.searchbar-textbox {
   border-color: $secondary-background-color;
   box-shadow: none !important;
   font-size: $toolbar-fontsize;
@@ -46,6 +47,10 @@ toolbar[brighttext] .toolbarbutton-1:hover {
 
 .urlbar-input {
   color: $text-color;
+
+  &[focused="true"] {
+    color: $text-color-hover;
+  }
 }
 
 .urlbar-icon {

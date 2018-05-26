@@ -11,3 +11,7 @@
   --chrome-nav-bar-controls-border-color: #{$u-reset-color};
   --panel-separator-color: #{$u-reset-color};
 }
+
+.browserContainer {
+  background-color: $background-color;
+}

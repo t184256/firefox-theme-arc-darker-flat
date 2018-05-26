@@ -1,0 +1,80 @@
+findbar {
+  --toolbarbutton-hover-background: #{$u-reset-color};
+  --toolbarbutton-active-background: #{$u-reset-color};
+
+  border-top: none !important;
+  background-color: $background-color;
+  box-shadow: $popup-box-shadow;
+  position: relative;
+  padding: 4px 0 !important;
+  opacity: 1 !important;
+
+  transition: none !important;
+
+  [anonid="findbar-textbox-wrapper"] {
+    border-radius: $border-radius;
+    background: $tertiary-background-color;
+  }
+
+  .findbar-textbox {
+    border-radius: $border-radius 0 0 $border-radius !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    color: $text-color;
+
+    &[focused="true"] {
+      color: $text-color-hover;
+    }
+  }
+
+  .findbar-find-previous,
+  .findbar-find-next {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+
+    .toolbarbutton-icon {
+      transform: scale(0.75);
+    }
+  }
+
+  .findbar-find-previous:hover,
+  .findbar-find-next:hover {
+    background: $tertiary-background-color;
+  }
+
+  .findbar-button {
+    margin-left: 10px !important;
+    padding: 0 2px 0 6px !important;
+    border-radius: $border-radius !important;
+    font-weight: 400;
+
+    &::before {
+      content: '✔';
+      background: $tertiary-background-color;
+      border-radius: $border-radius;
+      padding: 0 2px;
+      color: rgba(0,0,0,0);
+
+      transition: color .2s ease;
+    }
+
+    &:hover {
+      color: $text-color-hover;
+    }
+
+    &[checked="true"] {
+      &::before {
+        color: $accent-color !important;
+      }
+    }
+  }
+
+  .findbar-container > .findbar-find-fast {
+    font-weight: 700;
+    margin-left: 20px !important;
+    transform: translateY(1px);
+    color: $accent-color !important;
+  }
+}
