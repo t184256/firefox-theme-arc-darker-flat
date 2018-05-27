@@ -1,20 +1,20 @@
 /* panel */
 
 panelview {
-  --arrowpanel-dimmed: #{$background-color-hover};
-  --arrowpanel-dimmed-further: #{$secondary-background-color};
-  background-color: $background-color;
-  color: $text-color;
+  --arrowpanel-dimmed: #{$background-color-hover} !important;
+  --arrowpanel-dimmed-further: #{$secondary-background-color} !important;
+  background-color: $background-color !important;
+  color: $text-color !important;
 }
 
 panel toolbarbutton:not(.panel-subview-footer) {
-  border-radius: $border-radius;
+  border-radius: $border-radius !important;
   padding: 6px 12px !important;
   margin: 0 6px !important;
 }
 
 panel toolbarbutton:hover {
-  color: $text-color-hover;
+  color: $text-color-hover !important;
 }
 
 panel .subviewbutton[shortcut]::after {
@@ -22,9 +22,9 @@ panel .subviewbutton[shortcut]::after {
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background-color: $info-background-color;
+  background-color: $info-background-color !important;
   padding: 2px 4px;
-  border-radius: $border-radius;
+  border-radius: $border-radius !important;
 }
 
 panel .subview-subheader {
@@ -39,19 +39,19 @@ panel .panel-header > label {
 }
 
 panel .identity-popup-connection-secure {
-  color: $text-color-success;
+  color: $text-color-success !important;
 }
 
 #identity-popup[connection^="secure"] .identity-popup-security-content {
-  fill: $text-color-success;
+  fill: $text-color-success !important;
 }
 
 .panel-arrowcontent {
   border: 0 !important;
   box-shadow: none !important;
-  box-shadow: $popup-box-shadow;
+  box-shadow: $popup-box-shadow !important;
   margin: 5px 5px !important;
-  border-radius: $border-radius;
+  border-radius: $border-radius !important;
   overflow: hidden;
 }
 

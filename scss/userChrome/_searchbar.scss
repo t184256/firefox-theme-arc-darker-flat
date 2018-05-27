@@ -3,8 +3,8 @@ findbar {
   --toolbarbutton-active-background: #{$u-reset-color};
 
   border-top: none !important;
-  background-color: $background-color;
-  box-shadow: $popup-box-shadow;
+  background-color: $background-color !important;
+  box-shadow: $popup-box-shadow !important;
   position: relative;
   padding: 4px 0 !important;
   opacity: 1 !important;
@@ -12,8 +12,8 @@ findbar {
   transition: none !important;
 
   [anonid="findbar-textbox-wrapper"] {
-    border-radius: $border-radius;
-    background: $tertiary-background-color;
+    border-radius: $border-radius !important;
+    background: $tertiary-background-color !important;
   }
 
   .findbar-textbox {
@@ -21,10 +21,10 @@ findbar {
     border: none !important;
     box-shadow: none !important;
     background: none !important;
-    color: $text-color;
+    color: $text-color !important;
 
     &[focused="true"] {
-      color: $text-color-hover;
+      color: $text-color-hover !important;
     }
   }
 
@@ -41,7 +41,7 @@ findbar {
 
   .findbar-find-previous:hover,
   .findbar-find-next:hover {
-    background: $tertiary-background-color;
+    background: $tertiary-background-color !important;
   }
 
   .findbar-button {
@@ -52,8 +52,8 @@ findbar {
 
     &::before {
       content: '✔';
-      background: $tertiary-background-color;
-      border-radius: $border-radius;
+      background: $tertiary-background-color !important;
+      border-radius: $border-radius !important;
       padding: 0 2px;
       color: rgba(0,0,0,0);
 
@@ -61,7 +61,7 @@ findbar {
     }
 
     &:hover {
-      color: $text-color-hover;
+      color: $text-color-hover !important;
     }
 
     &[checked="true"] {

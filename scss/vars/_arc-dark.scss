@@ -3,25 +3,25 @@ $accent-background-color: darken($accent-color, 10%);
 $accent-background-text-color: rgba(255, 255, 255, 0.80);
 $accent-background-text-color-secondary: rgba(0, 0, 0, 0.65);
 
-$background-color: hsl(220, 13.8%, 21.4%) !important;
-$background-color-hover: rgba(0, 0, 0, 0.15) !important;
-$secondary-background-color: hsl(220, 13.8%, 17.4%) !important;
-$tertiary-background-color: rgba(0, 0, 0, 0.2) !important;
+$background-color: hsl(220, 13.8%, 21.4%);
+$background-color-hover: rgba(0, 0, 0, 0.15);
+$secondary-background-color: hsl(220, 13.8%, 17.4%);
+$tertiary-background-color: rgba(0, 0, 0, 0.2);
 $info-background-color: rgba(255, 255, 255, 0.05);
 
-$text-color: mix(white, hsl(220, 13.8%, 21.4%), 50%) !important;
-$text-color-hover: mix(white, hsl(220, 13.8%, 21.4%), 65%) !important;
-$text-color-disabled: mix(white, hsl(220, 13.8%, 21.4%), 15%) !important;
-$text-color-success: #058B00 !important;
+$text-color: mix(white, hsl(220, 13.8%, 21.4%), 50%);
+$text-color-hover: mix(white, hsl(220, 13.8%, 21.4%), 65%);
+$text-color-disabled: mix(white, hsl(220, 13.8%, 21.4%), 15%);
+$text-color-success: #058B00;
 
-$tabs-background-hover-color: rgba(255, 255, 255, 0.05) !important;
-$tabs-background-hover-line-color: rgba(255, 255, 255, 0.075) !important;
+$tabs-background-hover-color: rgba(255, 255, 255, 0.05);
+$tabs-background-hover-line-color: rgba(255, 255, 255, 0.075);
 
 $popup-arrow-color: 'hsl(220, 13.8%, 21.4%)';
-$popup-box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.25) !important;
+$popup-box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.25);
 
 $border-radius: 3px;
-$toolbar-fontsize: 95% !important;
+$toolbar-fontsize: 95%;
 $containercolors-filter: brightness(0.85);
 $menuitem-icon-scale: .8;
 

@@ -8,12 +8,12 @@
 }
 
 .tabbrowser-tab {
-  --tab-line-color: #{$accent-color};
-  --tab-loading-fill: #{$accent-color};
+  --tab-line-color: #{$accent-color} !important;
+  --tab-loading-fill: #{$accent-color} !important;
   border-top-left-radius: $border-radius !important;
   border-top-right-radius: $border-radius !important;
   overflow: hidden;
-  font-size: $toolbar-fontsize;
+  font-size: $toolbar-fontsize !important;
 }
 
 .tabbrowser-tab:not([selected=true]) {
@@ -60,14 +60,14 @@
 }
 
 .tabs-newtab-button .toolbarbutton-icon {
-  border: 3px solid $background-color;
+  border: 3px solid $background-color !important;
   padding: 4px !important;
   border-radius: 5px !important;
   transform: translateY(1px);
 }
 
 .tabs-newtab-button:hover .toolbarbutton-icon {
-  background-color: $tabs-background-hover-color;
+  background-color: $tabs-background-hover-color !important;
 }
 
 
@@ -75,7 +75,7 @@
 
 .tab-line[selected="true"] {
   background-color: var(--identity-tab-color, var(--tab-line-color)) !important;
-  filter: $containercolors-filter;
+  filter: $containercolors-filter !important;
 }
 
 .tab-bottom-line {
@@ -85,11 +85,11 @@
 /* tabs hover */
 
 #TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
-  background-color: $tabs-background-hover-color;
+  background-color: $tabs-background-hover-color !important;
 }
 
 #TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-line:not([selected=true]) {
-  background-color: $tabs-background-hover-line-color;
+  background-color: $tabs-background-hover-line-color !important;
 }
 
 

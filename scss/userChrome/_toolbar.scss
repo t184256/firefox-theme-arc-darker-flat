@@ -9,8 +9,8 @@
 
 toolbar {
   --toolbarbutton-inner-padding: 4px !important;
-  --toolbarbutton-hover-background: #{$background-color-hover};
-  --toolbarbutton-active-background: #{$background-color-hover};
+  --toolbarbutton-hover-background: #{$background-color-hover} !important;
+  --toolbarbutton-active-background: #{$background-color-hover} !important;
   padding-right: 5px !important;
 }
 
@@ -21,13 +21,13 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 .toolbarbutton-animatable-box[brighttext],
 toolbar[brighttext] .toolbarbutton-animatable-box,
 toolbar[brighttext] .toolbarbutton-1 {
-  fill: $text-color;
+  fill: $text-color !important;
 }
 
 .toolbarbutton-animatable-box[brighttext]:hover,
 toolbar[brighttext] .toolbarbutton-animatable-box:hover,
 toolbar[brighttext] .toolbarbutton-1:hover {
-  fill: $text-color-hover;
+  fill: $text-color-hover !important;
 }
 
 
@@ -35,9 +35,9 @@ toolbar[brighttext] .toolbarbutton-1:hover {
 
 #urlbar,
 .searchbar-textbox {
-  border-color: $secondary-background-color;
+  border-color: $secondary-background-color !important;
   box-shadow: none !important;
-  font-size: $toolbar-fontsize;
+  font-size: $toolbar-fontsize !important;
   max-height: 24px;
 }
 
@@ -46,19 +46,19 @@ toolbar[brighttext] .toolbarbutton-1:hover {
 }
 
 .urlbar-input {
-  color: $text-color;
+  color: $text-color !important;
 
   &[focused="true"] {
-    color: $text-color-hover;
+    color: $text-color-hover !important;
   }
 }
 
 .urlbar-icon {
-  fill: $text-color;
+  fill: $text-color !important;
 }
 
 .urlbar-icon:hover {
-  fill: $text-color-hover;
+  fill: $text-color-hover !important;
 }
 
 #urlbar-zoom-button {
@@ -66,7 +66,7 @@ toolbar[brighttext] .toolbarbutton-1:hover {
   border-radius: 3px !important;
   background-color: $info-background-color !important;
   border: none !important;
-  color: $text-color;
+  color: $text-color !important;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
@@ -78,18 +78,18 @@ toolbar[brighttext] .toolbarbutton-1:hover {
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity > #identity-icon-labels:-moz-lwtheme-brighttext {
-  color: $text-color-success;
+  color: $text-color-success !important;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain > #connection-icon,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity > #connection-icon,
 #urlbar[pageproxystate="valid"] > #identity-box.mixedActiveBlocked > #connection-icon {
-  fill: $text-color-success;
+  fill: $text-color-success !important;
 }
 
 #identity-box {
-  color: $text-color;
-  fill: $text-color;
+  color: $text-color !important;
+  fill: $text-color !important;
 }
 
 #identity-box > image {
@@ -105,9 +105,9 @@ toolbar[brighttext] .toolbarbutton-1:hover {
 .urlbar-icon-wrapper:hover:active,
 .urlbar-icon[open],
 .urlbar-icon-wrapper[open] {
-  background-color: $background-color-hover;
-  color: $text-color-hover;
-  fill: $text-color;
+  background-color: $background-color-hover !important;
+  color: $text-color-hover !important;
+  fill: $text-color !important;
 }
 
 [uidensity="compact"]:root .urlbar-icon {
@@ -117,7 +117,7 @@ toolbar[brighttext] .toolbarbutton-1:hover {
 
 #userContext-icons {
   transform: scale(.8);
-  filter: $containercolors-filter;
+  filter: $containercolors-filter !important;
 
   #userContext-label {
     transform: translateY(1px);
@@ -149,5 +149,5 @@ toolbar[brighttext] .toolbarbutton-1:hover {
 
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   padding: 4px 6px !important;
-  font-size: $toolbar-fontsize;
+  font-size: $toolbar-fontsize !important;
 }

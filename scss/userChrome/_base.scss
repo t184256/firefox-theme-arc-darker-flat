@@ -1,17 +1,17 @@
 :root {
-  --chrome-background-color: #{$background-color};
-  --chrome-secondary-background-color: #{$secondary-background-color};
+  --chrome-background-color: #{$background-color} !important;
+  --chrome-secondary-background-color: #{$secondary-background-color} !important;
 
-  --url-and-searchbar-background-color: #{$tertiary-background-color}; // deprecated?
-  --lwt-toolbar-field-background-color: #{$tertiary-background-color};
+  --url-and-searchbar-background-color: #{$tertiary-background-color} !important; // deprecated?
+  --lwt-toolbar-field-background-color: #{$tertiary-background-color} !important;
 
-  --chrome-color: #{$text-color};
-  --lwt-text-color: #{$text-color};
+  --chrome-color: #{$text-color} !important;
+  --lwt-text-color: #{$text-color} !important;
 
   --chrome-nav-bar-controls-border-color: #{$u-reset-color};
   --panel-separator-color: #{$u-reset-color};
 }
 
 .browserContainer {
-  background-color: $background-color;
+  background-color: $background-color !important;
 }

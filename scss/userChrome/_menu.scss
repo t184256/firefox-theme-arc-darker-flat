@@ -10,10 +10,10 @@ menupopup menupopup {
 }
 
 menupopup > .popup-internal-box {
-  background-color: $background-color;
+  background-color: $background-color !important;
   margin: 5px 5px !important;
-  box-shadow: $popup-box-shadow;
-  border-radius: $border-radius;
+  box-shadow: $popup-box-shadow !important;
+  border-radius: $border-radius !important;
   overflow: hidden;
   padding: 6px 0;
 }
@@ -31,10 +31,10 @@ menuitem[type="checkbox"],
 menuitem[type="checked"],
 menucaption {
   -moz-appearance: none !important;
-  color: $text-color;
+  color: $text-color !important;
   padding: 6px 5px !important;
   margin: 0 6px !important;
-  border-radius: $border-radius;
+  border-radius: $border-radius !important;
 }
 
 menuitem .menu-iconic-icon {
@@ -43,15 +43,15 @@ menuitem .menu-iconic-icon {
 
 menu[_moz-menuactive="true"]:not([disabled="true"]),
 menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
-  color: $text-color-hover;
-  background: $background-color-hover;
+  color: $text-color-hover !important;
+  background: $background-color-hover !important;
 
 }
 
 menu[disabled="true"],
 menuitem[disabled="true"],
 menucaption[disabled="true"] {
-  color: $text-color-disabled;
+  color: $text-color-disabled !important;
   background-color: $u-reset-color;
 }
 

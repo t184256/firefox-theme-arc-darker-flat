@@ -5,18 +5,18 @@
 }
 
 #PopupAutoCompleteRichResult .search-one-offs {
-  border-bottom: 2px solid $tertiary-background-color;
+  border-bottom: 2px solid $tertiary-background-color !important;
 }
 
 panel[type="autocomplete"],
 panel[type="autocomplete-richlistbox"] {
-  background-color: $secondary-background-color;
+  background-color: $secondary-background-color !important;
   border: none !important;
 }
 
 .autocomplete-richlistitem {
-  font-size: $toolbar-fontsize;
-  color: $text-color;
+  font-size: $toolbar-fontsize !important;
+  color: $text-color !important;
 
   .ac-separator {
     color: $u-reset-color;
@@ -25,7 +25,7 @@ panel[type="autocomplete-richlistbox"] {
   .ac-url:not([selected="true"]) {
     font-weight: bold;
     font-size: 90% !important;
-    color: $accent-color;
+    color: $accent-color !important;
   }
 
   .ac-url[selected="true"] {
@@ -33,13 +33,13 @@ panel[type="autocomplete-richlistbox"] {
   }
 
   .ac-action {
-    color: $text-color-disabled;
+    color: $text-color-disabled !important;
   }
 }
 
 .autocomplete-richlistitem:hover {
-  color: $text-color-hover;
-  background-color: $background-color-hover;
+  color: $text-color-hover !important;
+  background-color: $background-color-hover !important;
 
   .ac-action {
     color: $accent-color !important;
