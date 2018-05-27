@@ -31,11 +31,14 @@ menuitem[type="checkbox"],
 menuitem[type="checked"],
 menucaption {
   -moz-appearance: none !important;
-  padding: 5px;
   color: $text-color;
-  padding: 6px 12px !important;
+  padding: 6px 5px !important;
   margin: 0 6px !important;
   border-radius: $border-radius;
+}
+
+menuitem .menu-iconic-icon {
+  transform: scale($menuitem-icon-scale);
 }
 
 menu[_moz-menuactive="true"]:not([disabled="true"]),
@@ -50,4 +53,12 @@ menuitem[disabled="true"],
 menucaption[disabled="true"] {
   color: $text-color-disabled;
   background-color: $u-reset-color;
+}
+
+#context-navigation menuitem {
+  padding: 5px 1px 5px 4px !important;
+
+  .menu-iconic-icon {
+    transform: scale(1) !important;
+  }
 }

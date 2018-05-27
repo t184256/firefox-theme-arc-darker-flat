@@ -422,11 +422,14 @@ menuitem[type="checkbox"],
 menuitem[type="checked"],
 menucaption {
   -moz-appearance: none !important;
-  padding: 5px;
   color: #979a9f !important;
-  padding: 6px 12px !important;
+  padding: 6px 5px !important;
   margin: 0 6px !important;
   border-radius: 3px;
+}
+
+menuitem .menu-iconic-icon {
+  transform: scale(0.8);
 }
 
 menu[_moz-menuactive="true"]:not([disabled="true"]),
@@ -440,6 +443,14 @@ menuitem[disabled="true"],
 menucaption[disabled="true"] {
   color: #4e535b !important;
   background-color: rgba(0, 0, 0, 0) !important;
+}
+
+#context-navigation menuitem {
+  padding: 5px 1px 5px 4px !important;
+}
+
+#context-navigation menuitem .menu-iconic-icon {
+  transform: scale(1) !important;
 }
 
 findbar {
