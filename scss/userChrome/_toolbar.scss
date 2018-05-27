@@ -115,6 +115,15 @@ toolbar[brighttext] .toolbarbutton-1:hover {
   padding: 6px !important;
 }
 
+#userContext-icons {
+  transform: scale(.8);
+  filter: $containercolors-filter;
+
+  #userContext-label {
+    transform: translateY(1px);
+  }
+}
+
 #pageActionSeparator {
   width: 0 !important;
   border-inline-start: 0 !important;

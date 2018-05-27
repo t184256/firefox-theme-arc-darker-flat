@@ -71,6 +71,17 @@
 }
 
 
+/* container color tab-line */
+
+.tab-line[selected="true"] {
+  background-color: var(--identity-tab-color, var(--tab-line-color)) !important;
+  filter: $containercolors-filter;
+}
+
+.tab-bottom-line {
+  visibility: collapse !important;
+}
+
 /* tabs hover */
 
 #TabsToolbar[brighttext] > #tabbrowser-tabs > .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
