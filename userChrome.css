@@ -341,9 +341,12 @@ panel .identity-popup-connection-secure {
 #PopupAutoCompleteRichResult .search-one-offs {
   -moz-appearance: none !important;
   background-color: #2f343e !important;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2) !important;
-  height: 69px;
-  overflow: hidden;
+  border-bottom: 2px solid #22252d !important;
+}
+
+#PopupAutoCompleteRichResult .search-one-offs:has(.dummy) {
+  height: 2px;
+  background-color: #22252d !important;
 }
 
 #PopupAutoCompleteRichResult .search-one-offs .search-panel-header,
@@ -356,16 +359,23 @@ panel .identity-popup-connection-secure {
 }
 
 #PopupAutoCompleteRichResult .search-one-offs .search-panel-one-offs {
-  padding: 0 8px 8px 8px !important;
+  padding-left: 5px !important;
+  height: 53px !important;
+  transform: translateY(-4px);
 }
 
 #PopupAutoCompleteRichResult .search-one-offs .searchbar-engine-one-off-item:not(.dummy) {
   margin: 0 8px 0 0 !important;
-  border-radius: 3px !important;
+  border-radius: 6px !important;
+  border: 3px solid #2f343e !important;
 }
 
 #PopupAutoCompleteRichResult .search-one-offs .searchbar-engine-one-off-item:not(.dummy):hover {
   background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+#PopupAutoCompleteRichResult .search-one-offs .searchbar-engine-one-off-item:not(.dummy).search-setting-button-compact {
+  box-sizing: border-box !important;
 }
 
 #PopupAutoCompleteRichResult .search-one-offs .searchbar-engine-one-off-item.dummy {
