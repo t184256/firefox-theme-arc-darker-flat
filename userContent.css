@@ -34,7 +34,7 @@
   --newtab-topsites-icon-shadow: none;
   --newtab-topsites-label-color: #979a9f !important;
   --newtab-card-active-outline-color: rgba(0, 0, 0, 0) !important;
-  --newtab-card-background-color: rgba(0, 0, 0, 0.2) !important;
+  --newtab-card-background-color: #2f343e !important;
   --newtab-card-hairline-color: rgba(0, 0, 0, 0) !important;
   --newtab-card-shadow: 0 1px 8px 0 $grey-90-20;
   --newtab-snippets-background-color: rgba(0, 0, 0, 0.2) !important;
@@ -97,6 +97,11 @@
   color: #b6b8bb !important;
 }
 
+.activity-stream .card-title {
+  font-size: 90% !important;
+  margin: .3em 0 .5em !important;
+}
+
 .activity-stream .card-host-name,
 .activity-stream .card-context,
 .activity-stream .card-description {
@@ -105,11 +110,20 @@
 
 .activity-stream .card-description {
   opacity: 0.75 !important;
+  font-size: 80% !important;
+  line-height: 1.6 !important;
 }
 
 .activity-stream .compact-cards .card-outer .card-context {
   background-color: #262a32 !important;
   opacity: 1 !important;
+}
+
+.activity-stream .compact-cards .card-outer .card-text .card-title,
+.activity-stream .compact-cards .card-outer .card-text:not(.no-description) .card-title {
+  font-size: 75% !important;
+  line-height: 15px;
+  max-height: 15px;
 }
 
 .activity-stream .tile .top-site-icon.rich-icon {
