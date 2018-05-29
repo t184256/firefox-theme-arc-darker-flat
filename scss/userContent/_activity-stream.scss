@@ -1,117 +1,196 @@
-/* activity stream theme
-
-.activity-stream {
-  background-color: hsl(220, 13.8%, 17.4%) !important;
-  overflow: auto !important;
-
-  .section-title span {
-    color: $text-color;
-    fill: $text-color;
-  }
-
-  .section-title:hover span {
-    color: $text-color-hover;
-    fill: $text-color-hover;
-  }
-}
-
-
-
-.activity-stream .top-sites-list .top-site-outer:hover .tile,
-.activity-stream  .top-sites-list .top-site-outer:focus .tile,
-.activity-stream  .top-sites-list .top-site-outer.active .tile {
-  box-shadow: 0 0 0 5px rgba(0,0,0,.2) !important;
-}
-
-.activity-stream .top-sites-list .top-site-outer .top-site-icon {
-  box-shadow: none !important;
-}
-
-.activity-stream .top-sites-list .top-site-outer .title {
-  color: rgba(255,255,255,.5) !important;
-}
-
-.activity-stream .section-top-bar .info-option-icon {
-  fill: rgba(255,255,255,.5) !important;
-}
-
-.activity-stream .prefs-pane-button button {
-  fill: rgba(255,255,255,.5) !important;
-  background-size: 13px !important;
-}
-.activity-stream .prefs-pane-button button:hover {
-  background-color: #1E2228 !important;
-  border-radius: 4px !important;
-}
-
-.activity-stream .top-sites-list .top-site-outer .context-menu-button {
-  border: 0 !important;
-  background-color: #1E2228 !important;
-  fill: rgba(255, 255, 255, .5) !important;
-  background-size: 13px !important;
-}
-.activity-stream .top-sites-list .top-site-outer:hover .context-menu-button,
-.activity-stream .top-sites-list .top-site-outer:focus .context-menu-button,
-.activity-stream .top-sites-list .top-site-outer.active .context-menu-button {
-  transform: scale(1) !important;
-}
-
+/* activity stream theme */
 
 .activity-stream {
   // General styles
-  --newtab-background-color: $grey-80;
-  --newtab-border-primary-color: $grey-10-80;
-  --newtab-border-secondary-color: $grey-10-10;
-  --newtab-button-primary-color: $blue-60;
-  --newtab-button-secondary-color: $grey-70;
-  --newtab-element-active-color: $grey-10-20;
-  --newtab-element-hover-color: $grey-10-10;
-  --newtab-icon-primary-color: $grey-10-80;
-  --newtab-icon-secondary-color: $grey-10-40;
-  --newtab-icon-tertiary-color: $grey-10-40;
-  --newtab-inner-box-shadow-color: $grey-10-20;
-  --newtab-link-primary-color: $blue-40;
-  --newtab-link-secondary-color: $pocket-teal;
-  --newtab-text-conditional-color: $grey-10;
-  --newtab-text-primary-color: $grey-10;
-  --newtab-text-secondary-color: $grey-10-80;
-  --newtab-text-tertiary-color: $grey-10-60;
-  --newtab-textbox-background-color: $grey-70;
-  --newtab-textbox-border: $grey-10-20;
-  @include textbox-focus($blue-40); // sass-lint:disable-line mixins-before-declarations
+  --newtab-background-color: #{$secondary-background-color} !important;
+  --newtab-border-primary-color: #{$u-reset-color};
+  --newtab-border-secondary-color: #{$u-reset-color};
+  --newtab-button-primary-color: #{$info-background-color} !important;
+  --newtab-button-secondary-color: #{$info-background-color} !important;
+  --newtab-element-active-color: #{$info-background-color} !important;
+  --newtab-element-hover-color: #{$info-background-color} !important;
+  --newtab-icon-primary-color: #{$text-color} !important;
+  --newtab-icon-secondary-color: #{$text-color-hover} !important;
+  --newtab-icon-tertiary-color: #{$text-color-hover} !important;
+  --newtab-inner-box-shadow-color: #{$u-reset-color};
+  --newtab-link-primary-color: #{$accent-color} !important;
+  --newtab-link-secondary-color: #{$accent-background-color} !important;
+  --newtab-text-conditional-color: #{$text-color} !important;
+  --newtab-text-primary-color: #{$text-color} !important;
+  --newtab-text-secondary-color: #{$text-color-hover} !important;
+  --newtab-text-tertiary-color: #{$text-color-hover} !important;
+  --newtab-textbox-background-color: #{$tertiary-background-color} !important;
+  --newtab-textbox-border: #{$u-reset-color};
 
   // Context menu
-  --newtab-contextmenu-background-color: $grey-60;
-  --newtab-contextmenu-button-color: $grey-80;
+  --newtab-contextmenu-background-color: #{$background-color} !important;
+  --newtab-contextmenu-button-color: #{$background-color} !important;
 
   // Modal + overlay
-  --newtab-modal-color: $grey-80;
-  --newtab-overlay-color: $grey-90-80;
+  --newtab-modal-color: #{$background-color} !important;
+  --newtab-overlay-color: #{$background-color} !important;
 
   // Sections
-  --newtab-section-header-text-color: $grey-10-80;
-  --newtab-section-navigation-text-color: $grey-10-80;
-  --newtab-section-active-contextmenu-color: $white;
+  --newtab-section-header-text-color: #{$text-color} !important;
+  --newtab-section-navigation-text-color: #{$text-color} !important;
+  --newtab-section-active-contextmenu-color: #{$text-color} !important;
 
   // Search
-  --newtab-search-border-color: $grey-10-20;
-  --newtab-search-dropdown-color: $grey-70;
-  --newtab-search-dropdown-header-color: $grey-60;
-  --newtab-search-icon-color: $grey-10-60;
+  --newtab-search-border-color: #{$u-reset-color};
+  --newtab-search-dropdown-color: #{$background-color} !important;
+  --newtab-search-dropdown-header-color: #{$tertiary-background-color} !important;
+  --newtab-search-icon-color: #{$text-color} !important;
 
   // Top Sites
-  --newtab-topsites-background-color: $grey-70;
+  --newtab-topsites-background-color: #{$background-color} !important;
   --newtab-topsites-icon-shadow: none;
-  --newtab-topsites-label-color: $grey-10-80;
+  --newtab-topsites-label-color: #{$text-color} !important;
 
   // Cards
-  --newtab-card-active-outline-color: $grey-60;
-  --newtab-card-background-color: $grey-70;
-  --newtab-card-hairline-color: $grey-10-10;
+  --newtab-card-active-outline-color: #{$u-reset-color};
+  --newtab-card-background-color: #{$tertiary-background-color} !important;
+  --newtab-card-hairline-color: #{$u-reset-color};
   --newtab-card-shadow: 0 1px 8px 0 $grey-90-20;
 
   // Snippets
-  --newtab-snippets-background-color: $grey-70;
-  --newtab-snippets-hairline-color: $white-10;
+  --newtab-snippets-background-color: #{$tertiary-background-color} !important;
+  --newtab-snippets-hairline-color: #{$u-reset-color};
 }
-*/
+
+.activity-stream {
+  overflow: auto !important;
+
+  // prefs button
+  .prefs-button .icon-settings:hover {
+    color: $text-color-hover !important;
+    background-color: $secondary-background-color-hover !important;
+    border-radius: $border-radius !important;
+  }
+
+  // search
+  .search-wrapper {
+    input {
+      border: none !important;
+      box-shadow: none !important;
+      background: var(--newtab-textbox-background-color) !important;
+      padding-inline-start: 10px !important;
+
+      &:active,
+      &:focus {
+        color: $text-color-hover !important;
+      }
+    }
+
+    .search-button {
+      background-size: 12px 12px !important;
+
+      &:hover {
+        background-color: $tertiary-background-color !important;
+      }
+    }
+  }
+
+  // sections
+  .collapsible-section {
+    border-radius: 3px !important;
+
+    &.active {
+      background-color: $secondary-background-color-hover !important;
+    }
+  }
+
+  .section-title .click-target:hover span {
+    color: $text-color-hover !important;
+    fill: $text-color-hover !important;
+  }
+
+  .tile,
+  .card {
+    box-shadow: none !important;
+  }
+
+  .card,
+  .card-host-name,
+  .card-context {
+
+    &:hover,
+    &:hover .card-title {
+      color: $text-color-hover !important;
+    }
+  }
+
+  .card-host-name,
+  .card-context,
+  .card-description {
+    opacity: 0.5 !important;
+  }
+
+  .card-description {
+    opacity: 0.75 !important;
+  }
+
+  .compact-cards .card-outer .card-context {
+    background-color: $secondary-background-color !important;
+    opacity: 1 !important;
+  }
+
+  .tile .top-site-icon {
+    &.rich-icon {
+      background-color: $secondary-background-color !important;
+    }
+    &:not(.rich-icon) {
+      background-size: 16px !important;
+      bottom: auto !important;
+      height: 24px !important;
+      offset-inline-end: auto !important;
+      width: 24px !important;
+      font-size: 14px !important;
+      border-radius: 3px !important;
+    }
+  }
+
+  .top-sites-list a:hover .title {
+    color: $text-color-hover !important;
+  }
+
+  .collapsible-section .section-disclaimer button {
+    border: none !important;
+    border-radius: $border-radius !important;
+    box-shadow: none !important;
+    background: $info-background-color !important;
+    font-size: 85% !important;
+
+    &:hover {
+      color: $text-color-hover !important;
+    }
+  }
+
+  .context-menu-button {
+    box-shadow: none !important;
+  }
+
+  .context-menu {
+    border-radius: $border-radius !important;
+    box-shadow: $popup-box-shadow !important;
+  }
+
+  .context-menu-list {
+    padding: 8px !important;
+  }
+
+  .context-menu-item a {
+    font-size: $toolbar-fontsize !important;
+    color: $text-color !important;
+    padding: 6px 8px !important;
+    border-radius: $border-radius !important;
+
+    &:hover {
+      background-color: $background-color-hover !important;
+      color: $text-color-hover !important;
+    }
+
+    .icon {
+      transform: scale($menuitem-icon-scale);
+    }
+  }
+}

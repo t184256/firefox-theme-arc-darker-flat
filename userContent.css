@@ -1,117 +1,172 @@
-/* activity stream theme
+/* activity stream theme */
+.activity-stream {
+  --newtab-background-color: #262a32 !important;
+  --newtab-border-primary-color: rgba(0, 0, 0, 0) !important;
+  --newtab-border-secondary-color: rgba(0, 0, 0, 0) !important;
+  --newtab-button-primary-color: rgba(255, 255, 255, 0.05) !important;
+  --newtab-button-secondary-color: rgba(255, 255, 255, 0.05) !important;
+  --newtab-element-active-color: rgba(255, 255, 255, 0.05) !important;
+  --newtab-element-hover-color: rgba(255, 255, 255, 0.05) !important;
+  --newtab-icon-primary-color: #979a9f !important;
+  --newtab-icon-secondary-color: #b6b8bb !important;
+  --newtab-icon-tertiary-color: #b6b8bb !important;
+  --newtab-inner-box-shadow-color: rgba(0, 0, 0, 0) !important;
+  --newtab-link-primary-color: #0a84ff !important;
+  --newtab-link-secondary-color: #006bd6 !important;
+  --newtab-text-conditional-color: #979a9f !important;
+  --newtab-text-primary-color: #979a9f !important;
+  --newtab-text-secondary-color: #b6b8bb !important;
+  --newtab-text-tertiary-color: #b6b8bb !important;
+  --newtab-textbox-background-color: rgba(0, 0, 0, 0.2) !important;
+  --newtab-textbox-border: rgba(0, 0, 0, 0) !important;
+  --newtab-contextmenu-background-color: #2f343e !important;
+  --newtab-contextmenu-button-color: #2f343e !important;
+  --newtab-modal-color: #2f343e !important;
+  --newtab-overlay-color: #2f343e !important;
+  --newtab-section-header-text-color: #979a9f !important;
+  --newtab-section-navigation-text-color: #979a9f !important;
+  --newtab-section-active-contextmenu-color: #979a9f !important;
+  --newtab-search-border-color: rgba(0, 0, 0, 0) !important;
+  --newtab-search-dropdown-color: #2f343e !important;
+  --newtab-search-dropdown-header-color: rgba(0, 0, 0, 0.2) !important;
+  --newtab-search-icon-color: #979a9f !important;
+  --newtab-topsites-background-color: #2f343e !important;
+  --newtab-topsites-icon-shadow: none;
+  --newtab-topsites-label-color: #979a9f !important;
+  --newtab-card-active-outline-color: rgba(0, 0, 0, 0) !important;
+  --newtab-card-background-color: rgba(0, 0, 0, 0.2) !important;
+  --newtab-card-hairline-color: rgba(0, 0, 0, 0) !important;
+  --newtab-card-shadow: 0 1px 8px 0 $grey-90-20;
+  --newtab-snippets-background-color: rgba(0, 0, 0, 0.2) !important;
+  --newtab-snippets-hairline-color: rgba(0, 0, 0, 0) !important;
+}
 
 .activity-stream {
-  background-color: hsl(220, 13.8%, 17.4%) !important;
   overflow: auto !important;
-
-  .section-title span {
-    color: $text-color;
-    fill: $text-color;
-  }
-
-  .section-title:hover span {
-    color: $text-color-hover;
-    fill: $text-color-hover;
-  }
 }
 
-
-
-.activity-stream .top-sites-list .top-site-outer:hover .tile,
-.activity-stream  .top-sites-list .top-site-outer:focus .tile,
-.activity-stream  .top-sites-list .top-site-outer.active .tile {
-  box-shadow: 0 0 0 5px rgba(0,0,0,.2) !important;
+.activity-stream .prefs-button .icon-settings:hover {
+  color: #b6b8bb !important;
+  background-color: rgba(255, 255, 255, 0.025) !important;
+  border-radius: 3px !important;
 }
 
-.activity-stream .top-sites-list .top-site-outer .top-site-icon {
+.activity-stream .search-wrapper input {
+  border: none !important;
+  box-shadow: none !important;
+  background: var(--newtab-textbox-background-color) !important;
+  padding-inline-start: 10px !important;
+}
+
+.activity-stream .search-wrapper input:active, .activity-stream .search-wrapper input:focus {
+  color: #b6b8bb !important;
+}
+
+.activity-stream .search-wrapper .search-button {
+  background-size: 12px 12px !important;
+}
+
+.activity-stream .search-wrapper .search-button:hover {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.activity-stream .collapsible-section {
+  border-radius: 3px !important;
+}
+
+.activity-stream .collapsible-section.active {
+  background-color: rgba(255, 255, 255, 0.025) !important;
+}
+
+.activity-stream .section-title .click-target:hover span {
+  color: #b6b8bb !important;
+  fill: #b6b8bb !important;
+}
+
+.activity-stream .tile,
+.activity-stream .card {
   box-shadow: none !important;
 }
 
-.activity-stream .top-sites-list .top-site-outer .title {
-  color: rgba(255,255,255,.5) !important;
+.activity-stream .card:hover,
+.activity-stream .card:hover .card-title,
+.activity-stream .card-host-name:hover,
+.activity-stream .card-host-name:hover .card-title,
+.activity-stream .card-context:hover,
+.activity-stream .card-context:hover .card-title {
+  color: #b6b8bb !important;
 }
 
-.activity-stream .section-top-bar .info-option-icon {
-  fill: rgba(255,255,255,.5) !important;
+.activity-stream .card-host-name,
+.activity-stream .card-context,
+.activity-stream .card-description {
+  opacity: 0.5 !important;
 }
 
-.activity-stream .prefs-pane-button button {
-  fill: rgba(255,255,255,.5) !important;
-  background-size: 13px !important;
-}
-.activity-stream .prefs-pane-button button:hover {
-  background-color: #1E2228 !important;
-  border-radius: 4px !important;
+.activity-stream .card-description {
+  opacity: 0.75 !important;
 }
 
-.activity-stream .top-sites-list .top-site-outer .context-menu-button {
-  border: 0 !important;
-  background-color: #1E2228 !important;
-  fill: rgba(255, 255, 255, .5) !important;
-  background-size: 13px !important;
-}
-.activity-stream .top-sites-list .top-site-outer:hover .context-menu-button,
-.activity-stream .top-sites-list .top-site-outer:focus .context-menu-button,
-.activity-stream .top-sites-list .top-site-outer.active .context-menu-button {
-  transform: scale(1) !important;
+.activity-stream .compact-cards .card-outer .card-context {
+  background-color: #262a32 !important;
+  opacity: 1 !important;
 }
 
-
-.activity-stream {
-  // General styles
-  --newtab-background-color: $grey-80;
-  --newtab-border-primary-color: $grey-10-80;
-  --newtab-border-secondary-color: $grey-10-10;
-  --newtab-button-primary-color: $blue-60;
-  --newtab-button-secondary-color: $grey-70;
-  --newtab-element-active-color: $grey-10-20;
-  --newtab-element-hover-color: $grey-10-10;
-  --newtab-icon-primary-color: $grey-10-80;
-  --newtab-icon-secondary-color: $grey-10-40;
-  --newtab-icon-tertiary-color: $grey-10-40;
-  --newtab-inner-box-shadow-color: $grey-10-20;
-  --newtab-link-primary-color: $blue-40;
-  --newtab-link-secondary-color: $pocket-teal;
-  --newtab-text-conditional-color: $grey-10;
-  --newtab-text-primary-color: $grey-10;
-  --newtab-text-secondary-color: $grey-10-80;
-  --newtab-text-tertiary-color: $grey-10-60;
-  --newtab-textbox-background-color: $grey-70;
-  --newtab-textbox-border: $grey-10-20;
-  @include textbox-focus($blue-40); // sass-lint:disable-line mixins-before-declarations
-
-  // Context menu
-  --newtab-contextmenu-background-color: $grey-60;
-  --newtab-contextmenu-button-color: $grey-80;
-
-  // Modal + overlay
-  --newtab-modal-color: $grey-80;
-  --newtab-overlay-color: $grey-90-80;
-
-  // Sections
-  --newtab-section-header-text-color: $grey-10-80;
-  --newtab-section-navigation-text-color: $grey-10-80;
-  --newtab-section-active-contextmenu-color: $white;
-
-  // Search
-  --newtab-search-border-color: $grey-10-20;
-  --newtab-search-dropdown-color: $grey-70;
-  --newtab-search-dropdown-header-color: $grey-60;
-  --newtab-search-icon-color: $grey-10-60;
-
-  // Top Sites
-  --newtab-topsites-background-color: $grey-70;
-  --newtab-topsites-icon-shadow: none;
-  --newtab-topsites-label-color: $grey-10-80;
-
-  // Cards
-  --newtab-card-active-outline-color: $grey-60;
-  --newtab-card-background-color: $grey-70;
-  --newtab-card-hairline-color: $grey-10-10;
-  --newtab-card-shadow: 0 1px 8px 0 $grey-90-20;
-
-  // Snippets
-  --newtab-snippets-background-color: $grey-70;
-  --newtab-snippets-hairline-color: $white-10;
+.activity-stream .tile .top-site-icon.rich-icon {
+  background-color: #262a32 !important;
 }
-*/
+
+.activity-stream .tile .top-site-icon:not(.rich-icon) {
+  background-size: 16px !important;
+  bottom: auto !important;
+  height: 24px !important;
+  offset-inline-end: auto !important;
+  width: 24px !important;
+  font-size: 14px !important;
+  border-radius: 3px !important;
+}
+
+.activity-stream .top-sites-list a:hover .title {
+  color: #b6b8bb !important;
+}
+
+.activity-stream .collapsible-section .section-disclaimer button {
+  border: none !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  font-size: 85% !important;
+}
+
+.activity-stream .collapsible-section .section-disclaimer button:hover {
+  color: #b6b8bb !important;
+}
+
+.activity-stream .context-menu-button {
+  box-shadow: none !important;
+}
+
+.activity-stream .context-menu {
+  border-radius: 3px !important;
+  box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.25) !important;
+}
+
+.activity-stream .context-menu-list {
+  padding: 8px !important;
+}
+
+.activity-stream .context-menu-item a {
+  font-size: 95% !important;
+  color: #979a9f !important;
+  padding: 6px 8px !important;
+  border-radius: 3px !important;
+}
+
+.activity-stream .context-menu-item a:hover {
+  background-color: rgba(0, 0, 0, 0.15) !important;
+  color: #b6b8bb !important;
+}
+
+.activity-stream .context-menu-item a .icon {
+  transform: scale(0.8);
+}
