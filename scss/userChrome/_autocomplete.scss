@@ -5,7 +5,37 @@
 }
 
 #PopupAutoCompleteRichResult .search-one-offs {
+  -moz-appearance: none !important;
+  background-color: $background-color !important;
   border-bottom: 2px solid $tertiary-background-color !important;
+  height: 69px;
+  overflow: hidden;
+
+  .search-panel-header,
+  .search-panel-one-offs {
+    background-color: $background-color !important;
+  }
+
+  .search-panel-header {
+    padding: 3px 8px !important;
+  }
+
+  .search-panel-one-offs {
+    padding: 0 8px 8px 8px !important;
+  }
+
+  .searchbar-engine-one-off-item:not(.dummy) {
+    margin: 0 8px 0 0 !important;
+    border-radius: $border-radius !important;
+
+    &:hover {
+      background-color: $tertiary-background-color !important;
+    }
+  }
+
+  .searchbar-engine-one-off-item.dummy {
+    display: none !important;
+  }
 }
 
 panel[type="autocomplete"],

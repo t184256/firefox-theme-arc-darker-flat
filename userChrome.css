@@ -339,7 +339,37 @@ panel .identity-popup-connection-secure {
 }
 
 #PopupAutoCompleteRichResult .search-one-offs {
+  -moz-appearance: none !important;
+  background-color: #2f343e !important;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2) !important;
+  height: 69px;
+  overflow: hidden;
+}
+
+#PopupAutoCompleteRichResult .search-one-offs .search-panel-header,
+#PopupAutoCompleteRichResult .search-one-offs .search-panel-one-offs {
+  background-color: #2f343e !important;
+}
+
+#PopupAutoCompleteRichResult .search-one-offs .search-panel-header {
+  padding: 3px 8px !important;
+}
+
+#PopupAutoCompleteRichResult .search-one-offs .search-panel-one-offs {
+  padding: 0 8px 8px 8px !important;
+}
+
+#PopupAutoCompleteRichResult .search-one-offs .searchbar-engine-one-off-item:not(.dummy) {
+  margin: 0 8px 0 0 !important;
+  border-radius: 3px !important;
+}
+
+#PopupAutoCompleteRichResult .search-one-offs .searchbar-engine-one-off-item:not(.dummy):hover {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+#PopupAutoCompleteRichResult .search-one-offs .searchbar-engine-one-off-item.dummy {
+  display: none !important;
 }
 
 panel[type="autocomplete"],
