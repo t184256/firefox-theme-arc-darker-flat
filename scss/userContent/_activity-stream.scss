@@ -139,6 +139,7 @@
   .compact-cards .card-outer .card-context {
     background-color: $secondary-background-color !important;
     opacity: 1 !important;
+    clip-path: none !important;
   }
   .compact-cards .card-outer .card-text .card-title,
   .compact-cards .card-outer .card-text:not(.no-description) .card-title {
