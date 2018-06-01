@@ -441,7 +441,8 @@ menupopup menupopup {
   padding-top: 1px;
 }
 
-menupopup > .popup-internal-box {
+menupopup > .popup-internal-box,
+menupopup > * > .popup-internal-box {
   background-color: #2f343e !important;
   margin: 5px 5px !important;
   box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.25) !important;

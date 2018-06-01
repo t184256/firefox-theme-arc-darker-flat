@@ -9,7 +9,8 @@ menupopup menupopup {
   padding-top: 1px;
 }
 
-menupopup > .popup-internal-box {
+menupopup > .popup-internal-box,
+menupopup > * > .popup-internal-box {
   background-color: $background-color !important;
   margin: 5px 5px !important;
   box-shadow: $popup-box-shadow !important;
