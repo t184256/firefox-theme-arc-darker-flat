@@ -20,8 +20,8 @@ menupopup > * > .popup-internal-box {
 }
 
 menuseparator {
-  -moz-appearance: none;
-  height: 10px;
+  -moz-appearance: none !important;
+  height: 10px !important;
 }
 
 // -moz-appearance:none for radio/checkbox is broken
